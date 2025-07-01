@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffafc;
+  color: #333;
+}
+
+.about-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #ffe0eb 0%, #fff 100%);
+  overflow: visible;
+}
+
+/* Subtle dotted pattern behind container */
+.about-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(230, 192, 222, 0.2) 2px, transparent 3px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.1),
+    0 0 10px 2px #f8bbd0;
+}
+
+.about-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #d63384;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.3em;
+}
+
+/* Gradient underline below heading */
+.about-container h1::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #e91e63, #b30059);
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  box-shadow: 0 0 10px #e91e63aa;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #444;
+}
+
+.highlight {
+  color: #eb68bd;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 2px rgba(179, 0, 89, 0.6);
+  transition: text-shadow 0.3s ease;
+}
+
+.highlight:hover {
+  text-shadow: 0 0 8px #ef509a;
+  cursor: pointer;
+}
+
+.cta-button {
+  padding: 0.8em 1.5em;
+  background: linear-gradient(90deg, #e23c55, #ff3556);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 1em;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px palevioletred;
+}
+
+.cta-button:hover {
+  background-color: #c2185b;
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(194, 24, 91, 0.7);
+}
+
+section {
+  padding: 2em;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #e0e0e0;
+  font-size: 0.9em;
+}
